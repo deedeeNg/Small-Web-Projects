@@ -70,7 +70,7 @@ body {
   position: absolute;
   bottom: 0;
   left: 0.5rem;
-  /* transform: rotateZ(30deg) translateX(-1rem); */
+  transform: rotateZ(30deg) translateX(-1rem);
 }
 
 .tube {
