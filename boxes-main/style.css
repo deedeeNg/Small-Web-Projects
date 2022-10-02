@@ -24,9 +24,7 @@ html {
 .header {
   width: 40%;
   height: 100%;
-  display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: flex-start;
 }
 
@@ -57,6 +55,12 @@ html {
 .boxes {
   width: 40%;
   height: 100%;
+  perspective: 150rem;
+}
+
+.box {
+  transform-style: preserve-3d;
+  transform: rotateY(45deg) rotateX(30deg);
 }
 
 .box div {
@@ -64,4 +68,31 @@ html {
   height: 7rem;
   background-color: #efd81d;
   position: absolute;
+  opacity: 0.6;
+}
+
+div .top-side {
+  transform: rotateX(90deg) translateZ(3.5rem);
+}
+
+div .bottom-side {
+  transform: rotateX(90deg) translateZ(-3.5rem);
+}
+
+div .front-side {
+  transform: translateZ(3.5rem);
+}
+
+div .back-side {
+  transform: translateZ(-3.5rem);
+}
+
+div .right-side {
+  transform: rotateY(-90deg) translateX(3.5rem);
+  transform-origin: right;
+}
+
+div .left-side {
+  transform: rotateY(90deg) translateX(-3.5rem);
+  transform-origin: left;
 }
